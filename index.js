@@ -5,7 +5,7 @@ const fs = require('fs')
 const path = require('path')
 const wrench = require('wrench')
 const { argv } = require('yargs')
-let { nativePath, force } = argv
+let { nativePath, force, noWatch } = argv
 const pack = require("../../package.json")
 const watchFiles = pack["sync"]["watch-files"] || []
 const syncPath = pack["sync"]["sync-path"] || ""
@@ -75,13 +75,15 @@ if (nativePath) {
     if (force) {
         forceCopyAllWatchedFiles(nativePath)
     }
-    watchFiles.forEach(watchedFileOrPath => {
-        if (fs.statSync(watchedFileOrPath).isDirectory()) {
-            watchDir(watchedFileOrPath)
-        } else {
-            watchFile(watchedFileOrPath)
-        }
-    })
+    if (!noWatch) {
+        watchFiles.forEach(watchedFileOrPath => {
+            if (fs.statSync(watchedFileOrPath).isDirectory()) {
+                watchDir(watchedFileOrPath)
+            } else {
+                watchFile(watchedFileOrPath)
+            }
+        })
+    }
 } else {
     console.error('--nativePath is required')
 }
