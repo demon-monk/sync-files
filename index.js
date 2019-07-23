@@ -7,8 +7,9 @@ const wrench = require('wrench')
 const { argv } = require('yargs')
 let { nativePath, force } = argv
 const pack = require("./package.json")
-const watchFiles = pack["watch-files"] || []
-nativePath = path.join(nativePath, 'Carthage', 'Build', 'iOS', 'PhonicsBundle.framework', 'phonics')
+const watchFiles = pack["sync"]["watch-files"] || []
+const syncPath = pack["sync"]["sync-path"] || ""
+nativePath = path.join(nativePath, syncPath)
 const onFileChanged = (event, f) => {
     console.log({ event, f })
     if (event === 'change') {
