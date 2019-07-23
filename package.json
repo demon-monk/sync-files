@@ -1,0 +1,13 @@
+{
+  "name": "sync-files",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "bin": {
+    "sync": "./index.js"
+  },
+  "dependencies": {
+    "wrench": "^1.5.9",
+    "yargs": "^13.3.0"
+  }
+}
