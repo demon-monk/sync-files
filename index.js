@@ -47,6 +47,10 @@ const watchDir = dir => {
             fs.existsSync(path.join(dir, filename))
                 ? fs.statSync(path.join(dir, filename)).isDirectory()
                 : fs.statSync(path.join(nativePath, dir, filename)).isDirectory()
+        const targetFolder = path.parse(path.join(nativePath, dir, filename)).dir
+        if (!fs.existsSync(targetFolder)) {
+          fs.mkdirSync(targetFolder)
+        }
         if (isChangedDir) {
             onDirChanged(event, path.join(dir, filename))
         } else {
