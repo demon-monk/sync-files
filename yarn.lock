@@ -57,11 +57,6 @@ find-up@^3.0.0:
   dependencies:
     locate-path "^3.0.0"
 
-fs-watch-file@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.npmjs.org/fs-watch-file/-/fs-watch-file-1.0.0.tgz#078a64f1536207f87ea7ef86389ae32e17be5f2e"
-  integrity sha512-CEye0KE9MdJSeIns9R/++zPlYYyrtFb59lG9MbOvr8gwUC52xHxfAP8BIaNbG5JMsHIncgDTe58KN5vHF70wDg==
-
 get-caller-file@^2.0.1:
   version "2.0.5"
   resolved "https://registry.npmjs.org/get-caller-file/-/get-caller-file-2.0.5.tgz#4f94412a82db32f36e3b0b9741f8a97feb031f7e"
@@ -155,9 +150,9 @@ wrench@^1.5.9:
   integrity sha1-QRaRxjqbJTGxcAJnJ5veyiOyFCo=
 
 y18n@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.npmjs.org/y18n/-/y18n-4.0.0.tgz#95ef94f85ecc81d007c264e190a120f0a3c8566b"
-  integrity sha512-r9S/ZyXu/Xu9q1tYlpsLIsa3EeLXXk0VwlxqTcFRfg9EhMW+17kbt9G0NrgCmhGb5vT2hyhJZLfDGx+7+5Uj/w==
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/y18n/-/y18n-4.0.1.tgz#8db2b83c31c5d75099bb890b23f3094891e247d4"
+  integrity sha512-wNcy4NvjMYL8gogWWYAO7ZFWFfHcbdbE57tZO8e4cbpj8tfUcwrwqSl3ad8HxpYWCdXcJUCeKKZS62Av1affwQ==
 
 yargs-parser@^13.1.1:
   version "13.1.1"
